@@ -1,0 +1,30 @@
+
+<div class="main-container">
+    <div>
+        <ul>
+            
+            <li *ngFor="let student of students">
+                {{student.name}}, {{student.email}}, {{student.phoneNumber}}, {{student.cohort}}
+            </li>
+        </ul>
+    </div>
+    
+    
+    <div>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name"><br>
+            <label for="email">Email</label>
+            <input type="text" id="email"><br>
+            <label for="phonenum">Phone Number</label>
+            <input type="text" id="phonenum"><br>
+            <label for="cohort">Cohort</label>
+            <input type="text" id="cohort">
+        </div>
+        <div>
+            <button>Add</button>
+            <button>Edit</button>
+            <button>Delete</button>
+        </div>
+    </div>
+</div>
