@@ -1,30 +1,28 @@
 
-<div class="main-container">
-    <div>
-        <ul>
-            
-            <li *ngFor="let student of students">
-                {{student.name}}, {{student.email}}, {{student.phoneNumber}}, {{student.cohort}}
-            </li>
-        </ul>
-    </div>
-    
-    
-    <div>
-        <div>
-            <label for="name">Name</label>
-            <input type="text" id="name"><br>
-            <label for="email">Email</label>
-            <input type="text" id="email"><br>
-            <label for="phonenum">Phone Number</label>
-            <input type="text" id="phonenum"><br>
-            <label for="cohort">Cohort</label>
-            <input type="text" id="cohort">
-        </div>
-        <div>
-            <button>Add</button>
-            <button>Edit</button>
-            <button>Delete</button>
-        </div>
-    </div>
+<h1 class="text-center text-xl mb-4">Students List</h1>
+
+<div>
+    <table class="mx-auto">
+        <thead>
+            <tr class="text-left bg-black text-white">
+                <th class="px-4 py-4">Name</th>
+                <th class="px-4 py-4">Cohort</th>
+                <th class="px-4 py-4">Phone Number</th>
+                <th class="px-4 py-4">Email</th>
+                <th class="px-4 py-4">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let student of students" class="text-left">
+                <td class="px-4">{{student.name}}</td>
+                <td class="px-4">{{student.cohort}}</td>
+                <td class="px-4">{{student.phoneNumber}}</td>
+                <td class="px-4">{{student.email}}</td>
+                <td class="px-4 flex justify-between">
+                    <a href="edit-student/{{student._id}}" class=""><i class="fa-solid fa-pencil"></i></a>
+                    <button class="" (click)="delStudent(student)"><i class="fa-solid fa-trash"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

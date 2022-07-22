@@ -1,0 +1,18 @@
+<div>
+    <h2 class="text-center text-xl">Add Student</h2>
+    <form [formGroup]="addStudent" novalidate class="w-[300px] mx-auto shadow-lg p-4 rounded-md">
+        <label for="name" class="text-sm text-gray-500">Name</label><br>
+        <input type="text" id="name" class="text-gray-500 border-[2px] p-2 rounded-md w-full" formControlName="name"><br>
+
+        <label for="email" class="text-sm text-gray-500">Email</label><br>
+        <input type="text" id="email" class="text-gray-500 border-[2px] p-2 rounded-md w-full" formControlName="email"><br>
+
+        <label for="phonenum" class="text-sm text-gray-500">Phone Number</label><br>
+        <input type="text" id="phonenum" class="text-gray-500 border-[2px] p-2 rounded-md w-full" formControlName="phoneNumber"><br>
+
+        <label for="cohort" class="text-sm text-gray-500">Cohort</label><br>
+        <input type="text" id="cohort" class="text-gray-500 border-[2px] p-2 rounded-md w-full" formControlName="cohort"><br>
+
+        <button type="submit" (click)="onSubmit()">Add Student</button>
+    </form>
+</div>

@@ -9,14 +9,16 @@ const mongoose = require('mongoose');
 const studentsRouter = require('./routes/students');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = 3000;
 // --------------------
 
 
 // --------------------
 // >> Middleware <<
 // --------------------
-app.use(cors());
+app.use(cors([
+    "*"
+]));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 // --------------------
@@ -42,6 +44,6 @@ mongoose.connect('mongodb://localhost:27017/students', function(err, db) {
 })
 
 // >> Port <<
-app.listen(port, () => console.log('Listening on port 8080!'));
+app.listen(port, () => console.log('Listening on port 3000!'));
 
 
